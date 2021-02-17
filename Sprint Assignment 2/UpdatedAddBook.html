@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Books</title>
+    <script src="./App.js" defer></script>
+  </head>
+  <body>
+    <h2>
+      <span style="background-color: #000080; color: #ff6600;">Add Books</span>
+    </h2>
+    <table>
+      <tr>
+        <td>Book Name</td>
+        <td><input type="text" name="bname" minlength="3"></td>
+      </tr>
+      <tr>
+        <td>Book Type</td>
+        <td><input type="text" name="btype" minlength="5"></td>
+      </tr>
+   
+<tr>
+<td>Min-Age</td>
+<td>
+<select>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Max-Age</td>
+<td>
+<select>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+</td>
+</tr>
+      <tr>
+        <td>Price</td>
+        <td><input type="text" id="price" /></td>
+      </tr>
+      <tr>
+        <td>Quantity Available in Stock</td>
+        <td><input type="text" id="quantity" /></td>
+      </tr>
+      <tr>
+        <td>Rental amount per day</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <!-- Using my own function 'validate()' for validation as it is not mentioned -->
+          <input type="button" value="Submit" onclick="validate()" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

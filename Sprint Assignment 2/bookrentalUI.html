@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rent Books</title>
+
+		<script src="./App.js" defer></script>
+	</head>
+	<body>
+		<h2>
+			<span style="background-color: #000080; color: #ff6600;">Rent Books</span>
+		</h2>
+		<table>
+			<tr>
+				<td>Book Name</td>
+				<td>
+					<select>
+						<option>HTML</option>
+						<option>DBMS</option>
+						<option>SE</option>
+						<option>JAVA</option>
+						<option>PYTHON</option>
+						<option>ML</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>User Name</td>
+				<td><input type="text" id="username" /></td>
+				<td id="customer-name-feedback"></td>
+			</tr>
+			<tr>
+				<td>Rent Start Date</td>
+				<td>
+					<input type="date" id="startdate"/>
+				</td>
+				<td id="rent-start-date-feedback"></td>
+			</tr>
+			<tr>
+				<td>Rent Tenure</td>
+				<td><input type="number" id="tenure" /></td>
+				<td id="tenure-feedback"></td>
+			</tr>
+			<tr>
+				<td id="label">Number of Books available</td>
+				<td>
+					<input type="text" id="toysavailable" />
+				</td>
+			</tr>
+			<tr>
+				<td>Enter Number of Books</td>
+				<td><input type="number" id="numofbooks"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit Query" /></td>
+			</tr>
+		</table>
+	</body>
+</html>
