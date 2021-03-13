@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Advertising Estimate</h1>
+    <div class="form-group">
+        <form id="form">
+            <div class="form-item">
+                <h4>Name/Company name</h4>
+                <input type="text" id="companyName">
+                </input>
+            </div>
+            <div class="form-item">
+                <h4>Email</h4>
+                <input type="text" id="email">
+                </input>
+            </div>
+            <div class="form-item">
+                <h4>Ad Start Date</h4>
+                <input type="text" id="startdate">
+                </input>
+            </div>
+            <div class="form-item">
+                <h4>Ad End Date</h4>
+                <input type="text" id="enddate">
+                </input>
+            </div>
+            <div class="form-item">
+                <h4>Advertising Size (pixels)</h4>
+                <div style="display:flex direction:column">
+                    <div>
+                        <input type="radio" id="option1" name="option1" value="Option1">
+                        Option1
+                        </input>
+                    </div>
+                    <div>
+                        <input type="radio" id="option2" name="option2" value="Option2">
+                        Option2
+                        </input>
+                    </div>
+                    <input type="radio" id="option3" name="option3" value="Option3">
+                    Option3
+                    </input>
+                </div>
+            </div>
+            <div class="form-item">
+                <h4>Which site would you like to advertise on?</h4>
+                <div style="display:flex direction:column">
+                    <div>
+                        <input type="checkbox" id="option1" name="option1" value="Option1">
+                        Option1
+                        </input>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="option2" name="option2" value="Option2">
+                        Option2
+                        </input>
+                    </div>
+                    <input type="checkbox" id="option3" name="option3" value="Option3">
+                    Option3
+                    </input>
+                </div>
+            </div>
+            <div class="form-item">
+                <h4>Website to be advertised</h4>
+                <textarea id="adver">
+            </textarea>
+            </div>
+            <div class="form-item">
+                <h4>Comments</h4>
+                <textarea id="comment">
+            </textarea>
+            </div>
+        </form>
+        <div class="form-item">
+            <button onClick="validateInput()">Submit</button>
+        </div>
+    </div>
+
+    <div id="msg">
+        <div>
+</body>
+<script>
+    const validateInput = () => {
+        if (document.getElementById("companyName").value === "" ||
+            document.getElementById("email").value === "" ||
+            document.getElementById("startdate").value === "" ||
+            document.getElementById("startdate").value === ""
+
+        ) {
+            document.getElementById("msg").innerHTML = "<p>Please enter correct input</p>";
+        } else {
+            var kvpairs = [];
+            var form = document.getElementById("form")
+            for (var i = 0; i < form.elements.length; i++) {
+                var e = form.elements[i];
+                kvpairs.push(e.value);
+            }
+            var queryString = kvpairs.join(",");
+            document.getElementById("msg").innerHTML = queryString
+        }
+    }
+</script>
+
+</html>
