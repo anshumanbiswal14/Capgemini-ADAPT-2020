@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hello from DoSelect!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </head>
+  <body>
+    <input type="number" id="fahrenheit" onkeyup="convert('F')"> 
+    <input type="number" id="celsius" onkeyup="convert('C')"> 
+    <script> 
+       function convert(degree) { 
+           var x; 
+           if (degree == "C") 
+           { 
+               x = document.getElementById("celsius").value * 9 / 5 + 32;
+               document.getElementById("fahrenheit").value = x;
+           } 
+           else
+           { 
+               x = (document.getElementById("fahrenheit").value -32) * 5 / 9; 
+               document.getElementById("celsius").value = x; 
+           } 
+       }
+   </script>
+ </body>
+</html>
